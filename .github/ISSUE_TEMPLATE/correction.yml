@@ -1,0 +1,52 @@
+name: 📍 날짜·장소 정정
+description: 도보일지의 날짜·숙영지·경유지·거리·이야기가 영상과 다를 때
+title: "[정정] "
+labels: ["정정"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        제보 감사합니다! 확인 후 사이트에 반영합니다.
+        ⚠️ **좡발짱 본인의 신상 정보(사는 곳·가족·직장·실시간 위치 추정 등)는 적지 말아 주세요.** 영상에서 확인되는 여정 정보만 받습니다.
+  - type: input
+    id: date
+    attributes:
+      label: 해당 날짜
+      description: 사이트 표에 적힌 날짜 (예 2026.10.05)
+      placeholder: "2026.10.05"
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 무엇이 틀렸나요?
+      multiple: true
+      options:
+        - 날짜
+        - 숙영지(도착지)
+        - 경유지
+        - 지도 위치(좌표)
+        - 거리
+        - 이야기·이벤트
+        - 기타
+    validations:
+      required: true
+  - type: textarea
+    id: now
+    attributes:
+      label: 지금 사이트 내용
+      placeholder: "숙영지: ○○ 주유소"
+  - type: textarea
+    id: fix
+    attributes:
+      label: 올바른 내용
+      placeholder: "숙영지: △△ 롯지"
+    validations:
+      required: true
+  - type: textarea
+    id: basis
+    attributes:
+      label: 근거
+      description: 영상 링크 + 타임스탬프가 가장 좋습니다 (예 https://youtu.be/xxxx?t=754 — 손목시계·표지판·발언 등)
+    validations:
+      required: true

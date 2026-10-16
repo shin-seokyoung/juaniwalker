@@ -1,0 +1,11 @@
+name: 💡 사이트 제안
+description: 기능·디자인 제안이나 오류(링크 깨짐 등)
+title: "[제안] "
+labels: ["제안"]
+body:
+  - type: textarea
+    id: body
+    attributes:
+      label: 내용
+    validations:
+      required: true
